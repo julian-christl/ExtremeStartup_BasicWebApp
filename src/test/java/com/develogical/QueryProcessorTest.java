@@ -34,6 +34,12 @@ public class QueryProcessorTest {
     public void supportsSum(){
         assertThat(queryProcessor.process("what is 1 plus 1"), is("2"));
         assertThat(queryProcessor.process("what is 25 plus 14"), is("39"));
+        assertThat(queryProcessor.process("68cc9aa0: what is 1 plus 1"), is("2"));
+    }
+
+    @Test
+    public void supportsLargestNumber(){
+        assertThat(queryProcessor.process("which of the following numbers is the largest: 1, 2, 3, 4"), is("4"));
     }
 
 }
