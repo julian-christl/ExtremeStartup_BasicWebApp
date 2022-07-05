@@ -17,6 +17,12 @@ public class QueryProcessor {
             String s1 = g[g.length - 1].trim();
             String s2 = f[1].trim();
             return (Integer.parseInt(s1) + Integer.parseInt(s2)) + "";
+        } else if (query.toLowerCase().contains("multiplied by")) {
+            String[] f = query.toLowerCase().split("multiplied by");
+            String[] g = f[0].split(" ");
+            String s1 = g[g.length - 1].trim();
+            String s2 = f[1].trim();
+            return (Integer.parseInt(s1) * Integer.parseInt(s2)) + "";
         } else if (query.toLowerCase().contains("largest")) {
             String[] f = query.toLowerCase().split("largest:");
             String number = f[1].trim();
