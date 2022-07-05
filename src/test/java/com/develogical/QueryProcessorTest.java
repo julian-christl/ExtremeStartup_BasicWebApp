@@ -30,4 +30,10 @@ public class QueryProcessorTest {
         assertThat(queryProcessor.process("what is my name"), is("Julian"));
     }
 
+    @Test
+    public void supportsSum(){
+        assertThat(queryProcessor.process("what is 1 plus 1"), is("2"));
+        assertThat(queryProcessor.process("what is 25 plus 14"), is("39"));
+    }
+
 }

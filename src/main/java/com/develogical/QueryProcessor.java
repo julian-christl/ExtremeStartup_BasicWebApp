@@ -9,6 +9,12 @@ public class QueryProcessor {
                     "pre-eminent dramatist.";
         } else if (query.toLowerCase().contains("name")) {
             return "Julian";
+        } else if (query.toLowerCase().contains("plus")){
+            String [] f = query.toLowerCase().split("plus");
+            String[] g = f[0].split(" ");
+            String s1 = g[g.length-1].trim();
+            String s2 = f[1].trim();
+            return (Integer.parseInt(s1) + Integer.parseInt(s2))+"";
         }
         return "";
     }
